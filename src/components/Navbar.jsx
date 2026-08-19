@@ -43,6 +43,7 @@ export default function Navbar() {
         ? 'bg-white/95 backdrop-blur-md shadow-md py-3'
         : 'bg-transparent py-5'
     }`}>
+
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3 group">
             <img src="/sivarya_logo.png" alt="Sivarya Logo" className='w-full h-12' />
@@ -109,7 +110,14 @@ export default function Navbar() {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <a href="/contact" className="hidden sm:inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-hover text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all shadow-md shadow-terracotta/25 hover:-translate-y-0.5">
+          <a
+            href="/contact"
+            className={`hidden sm:inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded-full border transition-all hover:-translate-y-0.5 ${
+              scrolled
+                ? 'border-navy/20 text-navy hover:bg-navy hover:text-white'
+                : 'border-white/40 text-white hover:bg-white/10'
+            }`}
+          >
             <span>Let's Talk</span>
             <ArrowRight className="w-4 h-4" />
           </a>
