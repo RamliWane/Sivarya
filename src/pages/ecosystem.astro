@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/react/Navbar.jsx';
+import EcosystemSection from '../components/react/EcosystemSection.jsx';
+import WhySivarya from '../components/react/WhySivarya.jsx';
+import CTABanner from '../components/react/CTABanner.jsx';
+import Footer from '../components/react/Footer.jsx';
+---
+
+<Layout title="The Ecosystem & Legal Legitimacy - PT Sinergi Inovasi Karya (Sivarya)">
+	<Navbar client:load />
+	<main style="padding-top: 4rem;">
+		<EcosystemSection client:load />
+		<WhySivarya client:visible />
+		<CTABanner client:visible />
+	</main>
+	<Footer client:visible />
+</Layout>

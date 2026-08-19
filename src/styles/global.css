@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1A2E4C;
+  --color-navy-dark: #0F172A;
+  --color-navy-light: #25426E;
+  
+  --color-terracotta: #D87939;
+  --color-terracotta-hover: #C26527;
+  --color-terracotta-light: rgba(216, 121, 57, 0.1);
+  --color-terracotta-glow: rgba(216, 121, 57, 0.25);
+
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Explicit custom utility classes for guaranteed Tailwind compatibility */
+.bg-navy { background-color: #1A2E4C; }
+.text-navy { color: #1A2E4C; }
+.border-navy { border-color: #1A2E4C; }
+
+.bg-terracotta { background-color: #D87939; }
+.text-terracotta { color: #D87939; }
+.border-terracotta { border-color: #D87939; }
+.hover\:bg-terracotta-hover:hover { background-color: #C26527; }
+
+.text-terracotta-gradient {
+  background: linear-gradient(135deg, #D87939 0%, #E88E50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0F172A;
+  background-color: #FFFFFF;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+}
+
+.grid-bg-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(26, 46, 76, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 46, 76, 0.04) 1px, transparent 1px);
+}

@@ -1,11 +1,26 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../components/react/Navbar.jsx';
+import Hero from '../components/react/Hero.jsx';
+import WhySivarya from '../components/react/WhySivarya.jsx';
+import ExpertiseGrid from '../components/react/ExpertiseGrid.jsx';
+import CaseStudiesGrid from '../components/react/CaseStudiesGrid.jsx';
+import EcosystemSection from '../components/react/EcosystemSection.jsx';
+import ContactSection from '../components/react/ContactSection.jsx';
+import CTABanner from '../components/react/CTABanner.jsx';
+import Footer from '../components/react/Footer.jsx';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Sivarya - Integrated Creative Ecosystem | PT Sinergi Inovasi Karya">
+	<Navbar client:load />
+	<main>
+		<Hero client:load />
+		<WhySivarya client:visible />
+		<ExpertiseGrid client:visible />
+		<CaseStudiesGrid client:visible />
+		<EcosystemSection client:visible />
+		<ContactSection client:visible />
+		<CTABanner client:visible />
+	</main>
+	<Footer client:visible />
 </Layout>
