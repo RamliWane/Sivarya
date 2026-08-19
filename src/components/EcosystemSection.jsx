@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, Award } from 'lucide-react';
 
 export default function EcosystemSection() {

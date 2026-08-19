@@ -1,4 +1,3 @@
-import React from 'react';
 import { Headphones, Play } from 'lucide-react';
 
 function SpotifyIcon({ className }) {
@@ -47,7 +46,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
       </div>
 
-      {/* Hero Content — Centered */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-32 pb-56 min-h-screen">
         <div className="inline-flex items-center gap-2 mb-5">
           <Headphones className="w-4 h-4 text-white/70" />
@@ -56,27 +54,23 @@ export default function Hero() {
           </span>
         </div>
 
-        <h1 className="font-heading font-black text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase leading-[0.95] tracking-tight max-w-4xl mb-6">
-          Dive Into Our
-          <br />
-          Podverse
+        <h1 className="font-heading font-black text-white text-4xl sm:text-5xl md:text-6xl lg:text-4xl uppercase leading-[0.95] tracking-tight max-w-4xl mb-6">
+          One Seamless Ecosystem. Infinite Possibilities for Your Brand.
         </h1>
 
         <p className="text-white/60 text-base sm:text-lg max-w-xl leading-relaxed mb-8">
-          Jelajahi berbagai episode podcast &amp; radio dari tim kami.
-          Cerita, wawasan, dan inspirasi — semua ada di satu tempat.
+          Sebagai Integrated Creative Ecosystem, kami merancang solusi end-to-end untuk mengakselerasi bisnis Anda. Dari arsitektur digital, produksi konten visual, hingga experiential events dan mobilitas korporat, semuanya terorkestrasi dalam satu pintu.
         </p>
 
         <a
           href="#episodes"
           className="inline-flex items-center gap-2.5 bg-white text-navy font-semibold px-7 py-3.5 rounded-full transition-all hover:bg-white/90 hover:shadow-lg hover:shadow-white/20 hover:-translate-y-0.5"
         >
-          <Play className="w-4 h-4 fill-current" />
-          <span>Listen More</span>
+          <img src="/whatsapp-logo.webp" alt="Play Button" className="w-10 h-10 rounded-full" />
+          <span>Konsultasikan Objektif Anda</span>
         </a>
       </div>
 
-      {/* Floating Platform Card */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-full max-w-2xl px-6 mb-0">
         <div className="bg-white rounded-t-3xl shadow-2xl shadow-black/20 px-6 py-6 sm:px-8 sm:py-7">
           <p className="text-center text-xs sm:text-sm font-semibold text-slate-400 tracking-wide uppercase mb-5">

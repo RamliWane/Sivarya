@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Code, 
   Video, 
@@ -35,31 +35,22 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navText = scrolled ? 'text-navy' : 'text-white';
+
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-md py-3 border-b border-slate-200' 
-        : 'bg-white/80 backdrop-blur-md py-4 border-b border-slate-100'
+      scrolled
+        ? 'bg-white/95 backdrop-blur-md shadow-md py-3'
+        : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Brand Logo */}
         <a href="/" className="flex items-center gap-3 group">
-          <div className="shadow-sm rounded-lg overflow-hidden group-hover:scale-105 transition-transform">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="8" fill="#1A2E4C"/>
-              <path d="M10 22L16 10L22 22" stroke="#D87939" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M12.5 17H19.5" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round"/>
-            </svg>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-heading font-black text-xl tracking-wider text-navy leading-none">SIVARYA</span>
-            <span className="text-[11px] font-semibold tracking-wide text-terracotta">PT Sinergi Inovasi Karya</span>
-          </div>
+            <img src="/sivarya_logo.png" alt="Sivarya Logo" className='w-full h-12' />
         </a>
 
         {/* Desktop Nav Links */}
         <nav className="hidden lg:flex items-center gap-8">
-          <a href="/#home" className="text-navy font-semibold text-sm hover:text-terracotta transition-colors">
+          <a href="/#home" className={`${navText} font-semibold text-sm hover:text-terracotta transition-colors`}>
             Home
           </a>
           
@@ -69,7 +60,7 @@ export default function Navbar() {
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
-            <a href="/expertise" className="text-navy font-semibold text-sm flex items-center gap-1 hover:text-terracotta transition-colors py-1">
+            <a href="/expertise" className={`${navText} font-semibold text-sm flex items-center gap-1 hover:text-terracotta transition-colors py-1`}>
               <span>Expertise</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180 text-terracotta' : ''}`} />
             </a>
@@ -107,11 +98,11 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="/works" className="text-navy font-semibold text-sm hover:text-terracotta transition-colors">
+          <a href="/works" className={`${navText} font-semibold text-sm hover:text-terracotta transition-colors`}>
             Our Works
           </a>
 
-          <a href="/ecosystem" className="text-navy font-semibold text-sm hover:text-terracotta transition-colors">
+          <a href="/ecosystem" className={`${navText} font-semibold text-sm hover:text-terracotta transition-colors`}>
             The Ecosystem
           </a>
         </nav>
@@ -124,7 +115,7 @@ export default function Navbar() {
           </a>
 
           <button 
-            className="lg:hidden text-navy p-1 hover:text-terracotta transition-colors"
+            className={`lg:hidden p-1 transition-colors ${scrolled ? 'text-navy hover:text-terracotta' : 'text-white hover:text-terracotta'}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >

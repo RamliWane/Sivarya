@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Layers, ShieldCheck, Zap, BarChart3, CheckCircle2 } from 'lucide-react';
 
 const pillars = [

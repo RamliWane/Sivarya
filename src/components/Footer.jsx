@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Phone, Mail, ShieldCheck, Globe, Share2, Video } from 'lucide-react';
 
 export default function Footer() {

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MessageSquare, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function CTABanner() {
