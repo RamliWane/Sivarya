@@ -104,7 +104,7 @@ export default function WhySivarya() {
                     <span className="font-heading font-extrabold text-xl text-white block leading-none mb-1">
                       {s.value}
                     </span>
-                    <span className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">
+                    <span className="text-[10px] font-semibold text-[#1A2E4C] uppercase tracking-wider">
                       {s.label}
                     </span>
                   </div>
