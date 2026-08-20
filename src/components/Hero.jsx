@@ -1,4 +1,4 @@
-import { Headphones, Play, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const platforms = [
   { name: 'WhatsApp', color: '#1DB954', images: "/whatsapp-logo-2.png" },
@@ -10,16 +10,6 @@ const platforms = [
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[700px]" id="home">
-      <style>{`
-        @keyframes arrow-nudge {
-          0%, 100% { transform: translateX(0); }
-          50% { transform: translateX(6px); }
-        }
-        .arrow-nudge {
-          animation: arrow-nudge 1.2s ease-in-out infinite;
-        }
-      `}</style>
-
       <div className="absolute inset-0 overflow-hidden">
         <img
           src="/images/portfolio_podcast.jpg"
@@ -64,7 +54,7 @@ export default function Hero() {
 
             <a
               href="#episodes"
-              className="group inline-flex items-center gap-3 bg-[#1A2E4C] text-white font-semibold px-7 py-3 rounded-md transition-all hover:-translate-y-0.5 hover:gap-4 shadow-lg"
+              className="group inline-flex items-center gap-3 bg-navy text-white font-semibold px-7 py-3 rounded-md transition-all hover:-translate-y-0.5 hover:gap-4 shadow-lg"
             >
               <span>Konsultasikan Objektif Anda</span>
               <ArrowRight className="w-5 h-5 arrow-nudge group-hover:animate-none group-hover:translate-x-1 transition-transform duration-300" />
