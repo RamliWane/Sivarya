@@ -74,26 +74,17 @@ export default function Navbar({ transparent = false }) {
             </a>
 
             <div 
-              className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 transition-all duration-300 ease-out ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 transition-all duration-300 ease-out origin-top ${
                 dropdownOpen
-                  ? 'opacity-100 translate-y-0 visible'
-                  : 'opacity-0 translate-y-3 invisible pointer-events-none'
+                  ? 'opacity-100 translate-y-0 scale-100 visible'
+                  : 'opacity-0 translate-y-3 scale-[0.97] invisible pointer-events-none'
               }`}
             >
-              <div className="w-[640px] max-w-[calc(100vw-3rem)] bg-white rounded-3xl shadow-2xl shadow-[#1A2E4C]/15 border border-slate-200/80 overflow-hidden">
+              <div className="w-[640px] max-w-[calc(100vw-3rem)] bg-white rounded-md shadow-2xl shadow-[#1A2E4C]/15 border border-slate-200/80 overflow-hidden">
 
                 <div className="relative bg-[#1A2E4C] px-7 py-5 overflow-hidden">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[140px] bg-[#D87939]/25 rounded-full blur-[70px] pointer-events-none" />
-                  <div className="relative flex items-center justify-between gap-4">
-                    <div>
-                      <span className="block font-mono text-[10px] font-bold tracking-widest text-[#D87939] uppercase mb-1">
-                        {'// Integrated Creative Ecosystem'}
-                      </span>
+                  <div className="relative flex items-center justify-center gap-4">
                       <h3 className="font-heading font-extrabold text-lg text-white leading-none">Tujuh Pilar Spesialisasi</h3>
-                    </div>
-                    <span className="inline-flex shrink-0 items-center gap-1.5 text-[10px] font-bold tracking-wider text-[#D87939] bg-white/10 px-3 py-1.5 rounded-full border border-[#D87939]/30 uppercase">
-                      <ShieldCheck className="w-3 h-3" /> B2B Certified
-                    </span>
                   </div>
                 </div>
 
@@ -110,7 +101,7 @@ export default function Navbar({ transparent = false }) {
                         style={{ transitionDelay: dropdownOpen ? `${80 + idx * 30}ms` : '0ms' }}
                         onClick={() => setDropdownOpen(false)}
                       >
-                        <span className="font-mono text-[11px] font-bold text-[#D87939]/50 group-hover/item:text-[#D87939] transition-colors pt-0.5 shrink-0">
+                        <span className="font-semibold text-[11px] text-[#D87939]/50 group-hover/item:text-[#D87939] transition-colors pt-0.5 shrink-0">
                           {String(idx + 1).padStart(2, '0')}
                         </span>
 
@@ -129,26 +120,7 @@ export default function Navbar({ transparent = false }) {
                     );
                   })}
 
-                  <a
-                    href="/expertise"
-                    onClick={() => setDropdownOpen(false)}
-                    className={`group/item relative flex flex-col justify-between rounded-xl bg-[#1A2E4C] p-4 overflow-hidden transition-all duration-300 ${
-                      dropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-                    }`}
-                    style={{ transitionDelay: dropdownOpen ? `${80 + servicesList.length * 30}ms` : '0ms' }}
-                  >
-                    <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-[#D87939]/40 rounded-full blur-2xl pointer-events-none group-hover/item:scale-125 transition-transform duration-500" />
-                    <div className="relative">
-                      <span className="block font-mono text-[9px] font-bold tracking-widest text-[#D87939] uppercase mb-1.5">All Expertise</span>
-                      <p className="font-heading font-bold text-sm text-white leading-snug mb-3">
-                        Jelajahi detail seluruh pilar layanan kami.
-                      </p>
-                    </div>
-                    <span className="relative inline-flex items-center gap-1.5 text-xs font-bold text-[#D87939] group-hover/item:gap-2.5 transition-all">
-                      <span>Kunjungi Halaman</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </a>
+                  
                 </div>
               </div>
             </div>

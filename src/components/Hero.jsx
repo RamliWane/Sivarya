@@ -35,18 +35,22 @@ export default function Hero() {
       <div className="relative z-[3] h-full flex items-center">
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-lg">
-            <div className="inline-flex items-center gap-2.5 mb-5">
+            <div className="hero-rise inline-flex items-center gap-2.5 mb-5" style={{ animationDelay: '100ms' }}>
               <span className="text-white/60 text-sm font-medium tracking-wide">
                 Ready to Build Something Bigger?
               </span>
             </div>
 
             <h1 className="font-heading font-black text-white text-4xl sm:text-5xl lg:text-[3.5rem] uppercase leading-[1.05] tracking-tight mb-6">
-              One Seamless Ecosystem.<br />
-              Infinite Possibilities.
+              <span className="block overflow-hidden pb-1">
+                <span className="hero-line block" style={{ animationDelay: '220ms' }}>One Seamless Ecosystem.</span>
+              </span>
+              <span className="block overflow-hidden pb-1">
+                <span className="hero-line block" style={{ animationDelay: '360ms' }}>Infinite Possibilities.</span>
+              </span>
             </h1>
 
-            <p className="text-white/50 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
+            <p className="hero-rise text-white/50 text-base sm:text-lg leading-relaxed mb-8 max-w-md" style={{ animationDelay: '520ms' }}>
               Integrated Creative Ecosystem yang merancang solusi end-to-end
               untuk mengakselerasi bisnis Anda dari arsitektur digital hingga
               experiential events.
@@ -54,7 +58,8 @@ export default function Hero() {
 
             <a
               href="#episodes"
-              className="group inline-flex items-center gap-3 bg-[#1A2E4C] text-white font-semibold px-7 py-3 rounded-md transition-all hover:-translate-y-0.5 hover:gap-4 shadow-lg"
+              className="hero-rise group inline-flex items-center gap-3 bg-[#1A2E4C] text-white font-semibold px-7 py-3 rounded-md transition-all hover:-translate-y-0.5 hover:gap-4 shadow-lg"
+              style={{ animationDelay: '680ms' }}
             >
               <span>Konsultasikan Objektif Anda</span>
               <ArrowRight className="w-5 h-5 arrow-nudge group-hover:animate-none group-hover:translate-x-1 transition-transform duration-300" />
@@ -64,29 +69,31 @@ export default function Hero() {
       </div>
 
       <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 z-4 w-full max-w-3xl px-4">
-        <div
-          className="rounded-2xl px-5 py-4 sm:px-8 sm:py-4 bg-white shadow-xl"
-        >
-          <div className="flex items-center justify-center gap-6 sm:gap-10">
-            {platforms.map(({ name, color, images, iconClass }) => (
-              <a
-                key={name}
-                href="#"
-                className="flex items-center gap-1.5 group"
-                aria-label={name}
-              >
-                <div className="flex items-center justify-center transition-colors">
-                  <img
-                    src={images}
-                    alt={name}
-                    className={iconClass || "w-10 h-10 sm:w-15 sm:h-16"}
-                  />
-                </div>
-                <span className="text-[10px] sm:text-[17px] font-semibold text-black group-hover:text-slate-800 transition-colors">
-                  {name}
-                </span>
-              </a>
-            ))}
+        <div className="hero-rise" style={{ animationDelay: '880ms' }}>
+          <div
+            className="rounded-2xl px-5 py-4 sm:px-8 sm:py-4 bg-white shadow-xl"
+          >
+            <div className="flex items-center justify-center gap-6 sm:gap-10">
+              {platforms.map(({ name, color, images, iconClass }) => (
+                <a
+                  key={name}
+                  href="#"
+                  className="flex items-center gap-1.5 group"
+                  aria-label={name}
+                >
+                  <div className="flex items-center justify-center transition-colors">
+                    <img
+                      src={images}
+                      alt={name}
+                      className={iconClass || "w-10 h-10 sm:w-15 sm:h-16"}
+                    />
+                  </div>
+                  <span className="text-[10px] sm:text-[17px] font-semibold text-black group-hover:text-slate-800 transition-colors">
+                    {name}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

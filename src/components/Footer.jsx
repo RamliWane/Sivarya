@@ -9,30 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-4 flex flex-col items-start">
             <a href="/" className="flex items-center gap-3 mb-5">
-              <div className="shadow-sm rounded-lg overflow-hidden">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                  <rect width="32" height="32" rx="8" fill="#1A2E4C"/>
-                  <path d="M10 22L16 10L22 22" stroke="#D87939" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M12.5 17H19.5" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-black text-xl tracking-wider text-[#1A2E4C] leading-none">SIVARYA</span>
-                <span className="text-[11px] font-semibold tracking-wide text-[#D87939]">PT Sinergi Inovasi Karya</span>
-              </div>
+              <img src="/sivarya_logo.png" alt="Sivarya Logo" className="h-10 w-auto" />
             </a>
 
             <p className="text-slate-600 text-sm leading-relaxed mb-6">
               Integrated Creative Ecosystem yang merancang solusi end-to-end dari infrastruktur digital, aset audio-visual, hingga experiential events dan perjalanan korporat.
             </p>
 
-            <div className="flex items-center gap-3 font-mono text-xs text-[#D87939] bg-white border border-slate-200 px-4 py-3 rounded-2xl shadow-sm">
-              <ShieldCheck className="w-4 h-4 shrink-0 text-[#D87939]" />
-              <div>
-                <span className="block font-semibold">AHU: PPPPPPPPPPPPPPPPPPP.Tahun 2026</span>
-                <span className="block font-semibold">NIB: 00000000000000</span>
-              </div>
-            </div>
+            
           </div>
 
           <div className="lg:col-span-2">

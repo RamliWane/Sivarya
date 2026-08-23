@@ -40,7 +40,6 @@ export default function ContactSection() {
     <section className="py-24 bg-white relative" id="contact">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono text-xs font-bold tracking-widest text-[#D87939] uppercase">// LET'S TALK</span>
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-[#1A2E4C] mt-3 mb-4">
             Diskusikan Visi & Objektif Brand Anda
           </h2>
@@ -50,7 +49,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
+          <div className="lg:col-span-7 bg-white rounded-lg p-8 sm:p-10 border border-slate-200 shadow-sm">
             <h3 className="font-heading font-bold text-2xl text-[#1A2E4C] mb-1">Lead Capture & Project Brief</h3>
             <p className="text-slate-500 text-sm mb-8">Isi formulir di bawah ini untuk menerima proposal awal & penawaran khusus.</p>
 
@@ -138,7 +137,7 @@ export default function ContactSection() {
           </div>
 
           <div className="lg:col-span-5 flex flex-col gap-8">
-            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+            <div className="bg-white rounded-lg p-8 border border-slate-200 shadow-sm">
               <span className="font-mono text-xs font-bold text-[#D87939] tracking-widest uppercase">DIRECT CONTACT</span>
               <h3 className="font-heading font-bold text-xl text-[#1A2E4C] mt-1 mb-6">Informasi Kontak Respon Cepat</h3>
 
@@ -165,13 +164,12 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
+            <div className="bg-white rounded-lg p-8 border border-slate-200 shadow-sm">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-11 h-11 rounded-full bg-[#D87939]/10 text-[#D87939] flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-mono text-xs font-bold text-[#D87939] tracking-widest uppercase">HEADQUARTERS</span>
                   <h4 className="font-heading font-bold text-lg text-[#1A2E4C]">PT Sinergi Inovasi Karya</h4>
                 </div>
               </div>
