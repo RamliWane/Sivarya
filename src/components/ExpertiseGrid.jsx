@@ -96,7 +96,7 @@ export default function ExpertiseGrid() {
     <section className="py-14 bg-white relative" id="expertise">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-navy mt-3 mb-4">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-[#1A2E4C] mt-3 mb-4">
             Solusi Terpadu Ekosistem Sivarya
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">
@@ -114,11 +114,11 @@ export default function ExpertiseGrid() {
                   idx > 0 ? 'sm:border-l border-slate-200' : ''
                 }`}
               >
-                <div className="text-navy mb-4">
+                <div className="text-[#1A2E4C] mb-4">
                   {item.icon}
                 </div>
 
-                <h3 className="font-heading font-bold text-sm text-navy leading-snug mb-2">
+                <h3 className="font-heading font-bold text-sm text-[#1A2E4C] leading-snug mb-2">
                   {item.title}
                 </h3>
 
@@ -126,7 +126,7 @@ export default function ExpertiseGrid() {
                   {item.desc}
                 </p>
 
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-navy uppercase tracking-wider group-hover:text-terracotta transition-colors">
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#1A2E4C] uppercase tracking-wider group-hover:text-[#D87939] transition-colors">
                   <span>Learn More</span>
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </span>

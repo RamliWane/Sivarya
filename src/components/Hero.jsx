@@ -54,7 +54,7 @@ export default function Hero() {
 
             <a
               href="#episodes"
-              className="group inline-flex items-center gap-3 bg-navy text-white font-semibold px-7 py-3 rounded-md transition-all hover:-translate-y-0.5 hover:gap-4 shadow-lg"
+              className="group inline-flex items-center gap-3 bg-[#1A2E4C] text-white font-semibold px-7 py-3 rounded-md transition-all hover:-translate-y-0.5 hover:gap-4 shadow-lg"
             >
               <span>Konsultasikan Objektif Anda</span>
               <ArrowRight className="w-5 h-5 arrow-nudge group-hover:animate-none group-hover:translate-x-1 transition-transform duration-300" />

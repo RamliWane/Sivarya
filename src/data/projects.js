@@ -4,7 +4,7 @@ export const projectsData = [
     category: "digital",
     categoryName: "Infrastruktur Digital",
     title: "Telkom Enterprise Ecosystem Portal",
-    client: "PT Telekomunikasi Indonesia Tbk",
+    client: "Komunikasi Indonesia Tbk",
     image: "/images/portfolio_digital.jpg",
     aspect: "aspect-[4/5]",
     summary: "Re-architecting internal digital portal & customer touchpoints for high traffic scalability and modern UI.",

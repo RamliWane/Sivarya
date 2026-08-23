@@ -12,15 +12,13 @@ import Footer from '../components/Footer.jsx';
 ---
 
 <Layout title="Sivarya - Integrated Creative Ecosystem | PT Sinergi Inovasi Karya">
-	<Navbar client:load />
+	<Navbar client:load transparent={true} />
 	<main>
 		<Hero client:load />
 		<WhySivarya client:visible />
 		<ExpertiseGrid client:visible />
 		<CaseStudiesGrid client:visible />
-		<EcosystemSection client:visible />
 		<ContactSection client:visible />
-		<CTABanner client:visible />
 	</main>
 	<Footer client:visible />
 </Layout>

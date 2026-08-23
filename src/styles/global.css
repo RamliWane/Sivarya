@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #1A2E4C;
-  --color-terracotta: #D87939;
-  --color-terracotta-hover: #C26527;
-
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -13,18 +9,8 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-body);
-  color: var(--color-navy);
+  color: #1A2E4C;
   background-color: #FFFFFF;
-}
-
-.hover\:bg-terracotta-hover:hover {
-  background-color: var(--color-terracotta-hover);
-}
-
-.text-terracotta-gradient {
-  background: linear-gradient(135deg, var(--color-terracotta) 0%, #E88E50 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 body {

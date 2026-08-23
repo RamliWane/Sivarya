@@ -40,8 +40,8 @@ export default function ContactSection() {
     <section className="py-24 bg-white relative" id="contact">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono text-xs font-bold tracking-widest text-terracotta uppercase">// LET'S TALK</span>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-navy mt-3 mb-4">
+          <span className="font-mono text-xs font-bold tracking-widest text-[#D87939] uppercase">// LET'S TALK</span>
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-[#1A2E4C] mt-3 mb-4">
             Diskusikan Visi & Objektif Brand Anda
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">
@@ -50,57 +50,56 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left Column: Lead Capture Form */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm">
-            <h3 className="font-heading font-bold text-2xl text-navy mb-1">Lead Capture & Project Brief</h3>
+            <h3 className="font-heading font-bold text-2xl text-[#1A2E4C] mb-1">Lead Capture & Project Brief</h3>
             <p className="text-slate-500 text-sm mb-8">Isi formulir di bawah ini untuk menerima proposal awal & penawaran khusus.</p>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold text-navy uppercase tracking-wider">Nama Lengkap *</label>
+                <label className="text-xs font-bold text-[#1A2E4C] uppercase tracking-wider">Nama Lengkap *</label>
                 <input 
                   type="text" 
                   required 
                   placeholder="Contoh: Budi Santoso"
                   value={formData.name}
                   onChange={e => setFormData({...formData, name: e.target.value})}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-navy text-sm font-medium focus:outline-none focus:border-terracotta focus:bg-white focus:ring-2 focus:ring-terracotta/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-[#1A2E4C] text-sm font-medium focus:outline-none focus:border-[#D87939] focus:bg-white focus:ring-2 focus:ring-[#D87939]/20 transition-all"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold text-navy uppercase tracking-wider">Email Korporat *</label>
+                  <label className="text-xs font-bold text-[#1A2E4C] uppercase tracking-wider">Email Korporat *</label>
                   <input 
                     type="email" 
                     required 
                     placeholder="name@company.com"
                     value={formData.email}
                     onChange={e => setFormData({...formData, email: e.target.value})}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-navy text-sm font-medium focus:outline-none focus:border-terracotta focus:bg-white focus:ring-2 focus:ring-terracotta/20 transition-all"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-[#1A2E4C] text-sm font-medium focus:outline-none focus:border-[#D87939] focus:bg-white focus:ring-2 focus:ring-[#D87939]/20 transition-all"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold text-navy uppercase tracking-wider">Nama Perusahaan *</label>
+                  <label className="text-xs font-bold text-[#1A2E4C] uppercase tracking-wider">Nama Perusahaan *</label>
                   <input 
                     type="text" 
                     required 
                     placeholder="PT Jaya Bersama"
                     value={formData.company}
                     onChange={e => setFormData({...formData, company: e.target.value})}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-navy text-sm font-medium focus:outline-none focus:border-terracotta focus:bg-white focus:ring-2 focus:ring-terracotta/20 transition-all"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-[#1A2E4C] text-sm font-medium focus:outline-none focus:border-[#D87939] focus:bg-white focus:ring-2 focus:ring-[#D87939]/20 transition-all"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold text-navy uppercase tracking-wider">Minat Pilar Layanan *</label>
+                <label className="text-xs font-bold text-[#1A2E4C] uppercase tracking-wider">Minat Pilar Layanan *</label>
                 <select 
                   required 
                   value={formData.service}
                   onChange={e => setFormData({...formData, service: e.target.value})}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-navy text-sm font-medium focus:outline-none focus:border-terracotta focus:bg-white focus:ring-2 focus:ring-terracotta/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-[#1A2E4C] text-sm font-medium focus:outline-none focus:border-[#D87939] focus:bg-white focus:ring-2 focus:ring-[#D87939]/20 transition-all"
                 >
                   <option value="" disabled>Pilih Layanan Utama...</option>
                   {serviceOptions.map((opt, i) => (
@@ -110,18 +109,18 @@ export default function ContactSection() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold text-navy uppercase tracking-wider">Brief Proyek & Objektif *</label>
+                <label className="text-xs font-bold text-[#1A2E4C] uppercase tracking-wider">Brief Proyek & Objektif *</label>
                 <textarea 
                   rows={4} 
                   required 
                   placeholder="Jelaskan kebutuhan, lini masa, atau objektif bisnis yang ingin dicapai..."
                   value={formData.brief}
                   onChange={e => setFormData({...formData, brief: e.target.value})}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-navy text-sm font-medium focus:outline-none focus:border-terracotta focus:bg-white focus:ring-2 focus:ring-terracotta/20 transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-[#1A2E4C] text-sm font-medium focus:outline-none focus:border-[#D87939] focus:bg-white focus:ring-2 focus:ring-[#D87939]/20 transition-all"
                 />
               </div>
 
-              <button type="submit" className="w-full bg-terracotta hover:bg-terracotta-hover text-white font-semibold py-4 rounded-xl transition-all shadow-md shadow-terracotta/30 flex items-center justify-center gap-2 mt-2">
+              <button type="submit" className="w-full bg-[#D87939] hover:bg-[#C26527] text-white font-semibold py-4 rounded-xl transition-all shadow-md shadow-[#D87939]/30 flex items-center justify-center gap-2 mt-2">
                 <span>Kirim Brief & Konsultasi Now</span>
                 <Send className="w-4 h-4" />
               </button>
@@ -138,30 +137,29 @@ export default function ContactSection() {
             )}
           </div>
 
-          {/* Right Column: Contact Cards & Google Maps */}
           <div className="lg:col-span-5 flex flex-col gap-8">
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
-              <span className="font-mono text-xs font-bold text-terracotta tracking-widest uppercase">DIRECT CONTACT</span>
-              <h3 className="font-heading font-bold text-xl text-navy mt-1 mb-6">Informasi Kontak Respon Cepat</h3>
+              <span className="font-mono text-xs font-bold text-[#D87939] tracking-widest uppercase">DIRECT CONTACT</span>
+              <h3 className="font-heading font-bold text-xl text-[#1A2E4C] mt-1 mb-6">Informasi Kontak Respon Cepat</h3>
 
               <div className="flex flex-col gap-4">
-                <a href="https://wa.me/6285110511403" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-terracotta/10 hover:border-terracotta/40 transition-all group">
-                  <div className="w-11 h-11 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0 group-hover:bg-terracotta group-hover:text-white transition-colors">
+                <a href="https://wa.me/6285110511403" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-[#D87939]/10 hover:border-[#D87939]/40 transition-all group">
+                  <div className="w-11 h-11 rounded-full bg-[#D87939]/10 text-[#D87939] flex items-center justify-center shrink-0 group-hover:bg-[#D87939] group-hover:text-white transition-colors">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-xs text-slate-500 font-medium block">Telepon & WhatsApp</span>
-                    <span className="font-bold text-navy text-base group-hover:text-terracotta transition-colors">+62 851-1051-1403</span>
+                    <span className="font-bold text-[#1A2E4C] text-base group-hover:text-[#D87939] transition-colors">+62 851-1051-1403</span>
                   </div>
                 </a>
 
-                <a href="mailto:halosivarya@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-terracotta/10 hover:border-terracotta/40 transition-all group">
-                  <div className="w-11 h-11 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0 group-hover:bg-terracotta group-hover:text-white transition-colors">
+                <a href="mailto:halosivarya@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-[#D87939]/10 hover:border-[#D87939]/40 transition-all group">
+                  <div className="w-11 h-11 rounded-full bg-[#D87939]/10 text-[#D87939] flex items-center justify-center shrink-0 group-hover:bg-[#D87939] group-hover:text-white transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-xs text-slate-500 font-medium block">Email Respon Cepat</span>
-                    <span className="font-bold text-navy text-base group-hover:text-terracotta transition-colors">halosivarya@gmail.com</span>
+                    <span className="font-bold text-[#1A2E4C] text-base group-hover:text-[#D87939] transition-colors">halosivarya@gmail.com</span>
                   </div>
                 </a>
               </div>
@@ -169,12 +167,12 @@ export default function ContactSection() {
 
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-11 h-11 rounded-full bg-terracotta/10 text-terracotta flex items-center justify-center shrink-0">
+                <div className="w-11 h-11 rounded-full bg-[#D87939]/10 text-[#D87939] flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="font-mono text-xs font-bold text-terracotta tracking-widest uppercase">HEADQUARTERS</span>
-                  <h4 className="font-heading font-bold text-lg text-navy">PT Sinergi Inovasi Karya</h4>
+                  <span className="font-mono text-xs font-bold text-[#D87939] tracking-widest uppercase">HEADQUARTERS</span>
+                  <h4 className="font-heading font-bold text-lg text-[#1A2E4C]">PT Sinergi Inovasi Karya</h4>
                 </div>
               </div>
 

@@ -13,7 +13,7 @@ export default function CaseStudiesGrid() {
     <section className="py-20 bg-white relative" id="works">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-navy mt-3 mb-4">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-[#1A2E4C] mt-3 mb-4">
             Rekam Jejak &amp; Hasil Nyata
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">
@@ -27,7 +27,7 @@ export default function CaseStudiesGrid() {
               key={cat.id}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                 activeFilter === cat.id
-                  ? 'bg-navy text-white'
+                  ? 'bg-[#1A2E4C] text-white'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
               onClick={() => setActiveFilter(cat.id)}
@@ -53,20 +53,20 @@ export default function CaseStudiesGrid() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <span className="absolute top-3 left-3 font-semibold text-[10px] font-bold bg-white/90 backdrop-blur-sm text-navy px-2.5 py-1 rounded-md">
+                <span className="absolute top-3 left-3 font-semibold text-[10px] font-bold bg-white/90 backdrop-blur-sm text-[#1A2E4C] px-2.5 py-1 rounded-md">
                   {proj.categoryName}
                 </span>
 
                 <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                  <ArrowRight className="w-4 h-4 text-navy" />
+                  <ArrowRight className="w-4 h-4 text-[#1A2E4C]" />
                 </div>
               </div>
 
               <div className="px-1">
-                <span className="text-[11px] font-bold text-terracotta uppercase tracking-wider block mb-1">
+                <span className="text-[11px] font-bold text-[#D87939] uppercase tracking-wider block mb-1">
                   {proj.client}
                 </span>
-                <h3 className="font-heading font-bold text-base text-navy leading-snug mb-1.5 group-hover:text-terracotta transition-colors">
+                <h3 className="font-heading font-bold text-base text-[#1A2E4C] leading-snug mb-1.5 group-hover:text-[#D87939] transition-colors">
                   {proj.title}
                 </h3>
                 <p className="text-slate-500 text-sm leading-relaxed line-clamp-2">
