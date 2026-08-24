@@ -85,10 +85,10 @@ Sub-headline: "Sebagai Integrated Creative Ecosystem, kami merancang solusi end-
                     <img
                       src={images}
                       alt={name}
-                      className={iconClass || "w-10 h-10 sm:w-15 sm:h-16"}
+                      className={iconClass || "w-10 h-10 sm:w-13 sm:h-13"}
                     />
                   </div>
-                  <span className="text-[10px] sm:text-[17px] font-semibold text-black group-hover:text-slate-800 transition-colors">
+                  <span className="text-[8px] sm:text-[15px] font-semibold text-black group-hover:text-slate-800 transition-colors">
                     {name}
                   </span>
                 </a>
