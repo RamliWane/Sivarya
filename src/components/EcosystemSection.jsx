@@ -49,7 +49,7 @@ function CurvedConnector({ direction }) {
 
 export default function EcosystemSection() {
   return (
-    <section className="py-20 lg:py-28 bg-white relative" id="ecosystem">
+    <section className="py-10 lg:py-10 bg-white relative" id="ecosystem">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-12 lg:gap-10 items-end pb-10 lg:pb-7 mb-7 lg:mb-7">
