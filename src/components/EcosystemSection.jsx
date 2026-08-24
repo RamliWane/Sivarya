@@ -1,4 +1,4 @@
-import { Award } from 'lucide-react';
+import { Award, MonitorSmartphone, Clapperboard, Megaphone, CalendarDays, Plane } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 
 const talents = [
@@ -10,25 +10,50 @@ const talents = [
 
 const legalFacts = [
   { label: 'Nama Entitas Legal', value: 'PT Sinergi Inovasi Karya' },
-  { label: 'Nomor AHU Kemenkumham', value: 'PPPPPPPPPPPPPPPPPPP.Tahun 2026' },
-  { label: 'Nomor Induk Berusaha (NIB)', value: '00000000000000' },
+  { label: 'Nomor AHU Kemenkumham', value: 'AHU-A007242.AH.01.31.Tahun 2026.' },
+  { label: 'Nomor Induk Berusaha (NIB)', value: '0307260016204' },
   { label: 'Sertifikasi & Kemitraan', value: 'B2B Enterprise Certified' },
 ];
 
 const pipelineSteps = [
-  { num: '01', title: 'Digital Infra', desc: 'Web & App Architecture' },
-  { num: '02', title: 'Audiovisual & Audio', desc: 'TVC & Podcast Studio' },
-  { num: '03', title: 'Social Strategy', desc: 'Data Organic Growth' },
-  { num: '04', title: 'Event & Merch', desc: 'Activation & Gifting' },
-  { num: '05', title: 'Travel Experience', desc: 'Curated Outings & Trips', highlight: true },
+  { num: '01', title: 'Digital Infra', desc: 'Website, aplikasi, dan sistem internal yang scalable sejak awal.', icon: MonitorSmartphone },
+  { num: '02', title: 'Audiovisual & Audio', desc: 'Video dan podcast berstandar studio untuk konten brand Anda.', icon: Clapperboard },
+  { num: '03', title: 'Social Strategy', desc: 'Distribusi konten terorkestrasi berbasis data untuk growth organik.', icon: Megaphone },
+  { num: '04', title: 'Event & Merch', desc: 'Aktivasi, konferensi, dan merchandise dieksekusi end-to-end.', icon: CalendarDays },
+  { num: '05', title: 'Travel Experience', desc: 'Perjalanan korporat terkurasi sebagai puncak pengalaman brand.', icon: Plane },
 ];
+
+function CurvedConnector({ direction }) {
+  return (
+    <svg
+      className={`hidden lg:block absolute left-full -translate-x-1/2 w-32 h-20 pointer-events-none ${
+        direction === 'down' ? 'lg:top-8' : 'lg:top-[-32px]'
+      }`}
+      viewBox="0 0 128 80"
+      fill="none"
+      aria-hidden="true"
+    >
+      {direction === 'down' ? (
+        <>
+          <path d="M 2 8 C 42 8, 86 72, 118 72" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" />
+          <path d="M 110 64 L 122 72 L 110 80" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </>
+      ) : (
+        <>
+          <path d="M 2 72 C 42 72, 86 8, 118 8" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" />
+          <path d="M 110 0 L 122 8 L 110 16" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </>
+      )}
+    </svg>
+  );
+}
 
 export default function EcosystemSection() {
   return (
     <section className="py-20 lg:py-28 bg-white relative" id="ecosystem">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid lg:grid-cols-12 lg:gap-10 items-end pb-10 lg:pb-14 mb-10 lg:mb-14">
+        <div className="grid lg:grid-cols-12 lg:gap-10 items-end pb-10 lg:pb-7 mb-7 lg:mb-7">
           <div className="lg:col-span-7">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[3.25rem] text-[#1A2E4C] mt-3 leading-[1.08]">
               Strategic Partner<br />Ecosystem
@@ -82,8 +107,8 @@ export default function EcosystemSection() {
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-white/10">
                 {legalFacts.map((fact) => (
                   <div key={fact.label} className="lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                    <span className="font-mono text-[10px] font-semibold text-slate-400 tracking-widest uppercase block mb-2">{fact.label}</span>
-                    <span className="font-bold text-base text-white block">{fact.value}</span>
+                    <span className="font-semibold text-[10px]  text-slate-400 tracking-widest uppercase block mb-2">{fact.label}</span>
+                    <span className="font-bold text-[14px] text-white block">{fact.value}</span>
                   </div>
                 ))}
               </div>
@@ -97,38 +122,41 @@ export default function EcosystemSection() {
               <h3 className="font-heading font-bold text-2xl lg:text-3xl text-[#1A2E4C] mt-3">Alur Kerja Terintegrasi Satu Pintu</h3>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
-              Satu tim orchestrator untuk seluruh kebutuhan — tanpa kompleksitas koordinasi multi-vendor.
+              Satu tim orchestrator untuk seluruh kebutuhan tanpa kompleksitas koordinasi multi-vendor.
             </p>
           </div>
 
-          <div className="relative flex flex-col gap-y-9 lg:grid lg:grid-cols-5 lg:gap-y-0">
-            <div className="absolute left-[22px] top-3 bottom-3 w-px bg-slate-200 lg:hidden" aria-hidden="true" />
-            {pipelineSteps.map((step, idx) => (
-              <Reveal
-                key={step.num}
-                delay={idx * 90}
-                className="relative flex gap-5 lg:block"
-              >
-                {idx < pipelineSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-[22px] left-[52px] right-0 h-px bg-slate-200" aria-hidden="true" />
-                )}
-                <div
-                  className={`relative z-10 w-11 h-11 shrink-0 flex items-center justify-center font-mono text-sm font-bold border transition-colors duration-300 ${
-                    step.highlight
-                      ? 'bg-[#D87939] border-[#D87939] text-white'
-                      : 'bg-white border-slate-200 text-[#D87939] hover:border-[#D87939]'
-                  }`}
+          <div className="relative flex flex-col gap-y-9 lg:grid lg:grid-cols-5 lg:gap-y-0 lg:pb-20">
+            <div className="absolute left-[32px] top-3 bottom-3 w-px bg-slate-200 lg:hidden" aria-hidden="true" />
+            {pipelineSteps.map((step, idx) => {
+              const Icon = step.icon;
+              const shifted = idx % 2 === 1;
+              return (
+                <Reveal
+                  key={step.num}
+                  delay={idx * 90}
+                  className={`relative flex gap-5 lg:block lg:px-3 ${shifted ? 'lg:translate-y-16' : ''}`}
                 >
-                  {step.num}
-                </div>
-                <div className="lg:mt-5 lg:pr-6">
-                  <h4 className="font-bold text-sm text-[#1A2E4C]">{step.title}</h4>
-                  <p className={`text-xs mt-1 leading-relaxed ${step.highlight ? 'text-slate-600 font-semibold' : 'text-slate-500'}`}>
-                    {step.desc}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+                  {idx < pipelineSteps.length - 1 && (
+                    <CurvedConnector direction={idx % 2 === 0 ? 'down' : 'up'} />
+                  )}
+
+                  <div className="relative z-10 shrink-0 lg:mx-auto">
+                    <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gray-200 flex items-center justify-center">
+                      <Icon className="w-7 h-7 lg:w-8 lg:h-8 text-[#D87939]" strokeWidth={1.75} />
+                    </div>
+                    <span className="absolute -top-2 -left-2 w-7 h-7 rounded-full bg-[#1A2E4C] text-white font-semibold text-[10px] flex items-center justify-center ring-4 ring-white">
+                      {step.num}
+                    </span>
+                  </div>
+
+                  <div className="lg:mt-6 lg:mx-auto lg:max-w-[180px] lg:text-center">
+                    <h4 className="font-bold text-sm text-[#1A2E4C]">{step.title}</h4>
+                    <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">{step.desc}</p>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
 

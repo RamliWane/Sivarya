@@ -63,7 +63,7 @@ export default function Navbar({ transparent = false }) {
             onKeyDown={(e) => { if (e.key === 'Escape') setDropdownOpen(false); }}
           >
             <a 
-              href="/expertise" 
+              href="/#expertise" 
               aria-haspopup="true"
               aria-expanded={dropdownOpen}
               className={`${navText} font-semibold text-sm flex items-center gap-1 hover:text-[#D87939] transition-colors py-1`}
@@ -94,7 +94,7 @@ export default function Navbar({ transparent = false }) {
                     return (
                       <a 
                         key={idx} 
-                        href={`/expertise#${service.slug}`} 
+                        // href={`/expertise#${service.slug}`} 
                         className={`group/item flex items-start gap-3 p-3 rounded-xl hover:bg-[#D87939]/[0.06] transition-all duration-300 ${
                           dropdownOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
                         }`}
@@ -126,11 +126,11 @@ export default function Navbar({ transparent = false }) {
             </div>
           </div>
 
-          <a href="/works" className={`${navText} font-semibold text-sm hover:text-[#D87939] transition-colors`}>
+          <a href="/#works" className={`${navText} font-semibold text-sm hover:text-[#D87939] transition-colors`}>
             Our Works
           </a>
 
-          <a href="/ecosystem" className={`${navText} font-semibold text-sm hover:text-[#D87939] transition-colors`}>
+          <a href="/#ecosystem" className={`${navText} font-semibold text-sm hover:text-[#D87939] transition-colors`}>
             The Ecosystem
           </a>
         </nav>
