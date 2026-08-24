@@ -58,8 +58,8 @@ export default function EcosystemSection() {
               Strategic Partner<br />Ecosystem
             </h2>
           </div>
-          <p className="lg:col-span-4 lg:col-start-9 text-slate-600 text-base lg:text-lg leading-relaxed mt-5 lg:mt-0">
-            Bukan sekadar vendor transaksional, melainkan <strong className="text-[#1A2E4C] font-semibold">Strategic Partner</strong> pertumbuhan jangka panjang bagi brand Anda.
+          <p className="lg:col-span-6 lg:col-start-8 text-slate-600 text-base lg:text-lg leading-relaxed mt-5 lg:mt-0">
+            Sivarya bukan sekadar vendor, melainkan <strong className="text-[#1A2E4C] font-semibold">Strategic Partner</strong>. Sebagai Integrated Creative Ecosystem, kami memadukan talenta teknologi inovatif, kreator visioner, dan eksekutor lapangan yang solid untuk mendeliver end-to-end
           </p>
         </div>
 
