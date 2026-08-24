@@ -138,7 +138,7 @@ export default function ContactSection() {
 
           <div className="lg:col-span-5 flex flex-col gap-8">
             <div className="bg-white rounded-lg p-8 border border-slate-200 shadow-sm">
-              <span className="font-mono text-xs font-bold text-[#D87939] tracking-widest uppercase">DIRECT CONTACT</span>
+              <span className="text-xs font-semibold text-[#D87939] tracking-widest uppercase">DIRECT CONTACT</span>
               <h3 className="font-heading font-bold text-xl text-[#1A2E4C] mt-1 mb-6">Informasi Kontak Respon Cepat</h3>
 
               <div className="flex flex-col gap-4">

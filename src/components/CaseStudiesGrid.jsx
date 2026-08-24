@@ -11,7 +11,7 @@ export default function CaseStudiesGrid() {
 
   return (
     <section className="py-20 bg-white relative" id="works">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 pb-10 sm:pb-15 lg:border-b border-b border-slate-400">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-[#1A2E4C] mt-3 mb-4">
             Rekam Jejak &amp; Hasil Nyata

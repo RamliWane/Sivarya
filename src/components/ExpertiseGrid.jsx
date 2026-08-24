@@ -160,7 +160,7 @@ function ServiceCard({ item, idx }) {
     <div
       className={`group relative flex flex-col py-8 px-6 lg:px-5 transition-colors duration-300 border-b sm:border-b-0 border-slate-200 lg:border-b-0 ${
         idx > 0 ? 'sm:border-l border-slate-200' : ''
-      } ${open ? 'bg-[#D87939]/[0.04]' : 'hover:bg-slate-50/50'}`}
+      } ${open ? 'bg-white' : 'hover:bg-slate-50/50'}`}
     >
       <div
         ref={measureRef}
@@ -185,7 +185,7 @@ function ServiceCard({ item, idx }) {
             type="button"
             aria-expanded={open}
             onClick={() => setOpen(!open)}
-            className="inline bg-transparent border-0 p-0 m-0 text-xs leading-relaxed font-bold text-[#D87939] hover:text-[#C26527] hover:underline cursor-pointer"
+            className="inline border-0 p-0 m-0 text-xs leading-relaxed font-bold text-[#D87939] hover:text-[#C26527] hover:underline cursor-pointer"
           >
             {open ? 'Tutup' : 'Selengkapnya'}
           </button>
