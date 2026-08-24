@@ -26,9 +26,8 @@ const pipelineSteps = [
 function CurvedConnector({ direction }) {
   return (
     <svg
-      className={`hidden lg:block absolute left-full -translate-x-1/2 w-32 h-20 pointer-events-none ${
-        direction === 'down' ? 'lg:top-8' : 'lg:top-[-32px]'
-      }`}
+      className={`hidden lg:block absolute left-full -translate-x-1/2 w-32 h-20 pointer-events-none ${direction === 'down' ? 'lg:top-8' : 'lg:top-[-32px]'
+        }`}
       viewBox="0 0 128 80"
       fill="none"
       aria-hidden="true"
@@ -93,24 +92,43 @@ export default function EcosystemSection() {
           </Reveal>
 
           <Reveal delay={200} className="border-b lg:border-r border-slate-200 lg:col-span-12">
-            <div className="bg-[#1A2E4C] text-white p-8 lg:p-12">
-              <div className="flex flex-col sm:flex-row sm:items-center gap-5 pb-8 mb-8 lg:mb-10 border-b border-white/10">
-                <div className="w-14 h-14 rounded-full bg-white/10 text-[#D87939] flex items-center justify-center shrink-0">
-                  <Award className="w-7 h-7" />
-                </div>
-                <div>
-                  <span className="text-xs font-semibold tracking-widest text-[#D87939] uppercase block">Corporate Legitimacy</span>
-                  <h3 className="font-heading font-bold text-xl lg:text-2xl text-white mt-1">Legalitas Perusahaan Terverifikasi Resmi</h3>
-                </div>
-              </div>
+            <div className="relative overflow-hidden bg-[#1A2E4C] text-white p-8 lg:p-14">
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x lg:divide-white/10">
-                {legalFacts.map((fact) => (
-                  <div key={fact.label} className="lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                    <span className="font-semibold text-[10px]  text-slate-400 tracking-widest uppercase block mb-2">{fact.label}</span>
-                    <span className="font-bold text-[14px] text-white block">{fact.value}</span>
-                  </div>
-                ))}
+              <span className="pointer-events-none select-none absolute -bottom-6 left-2 lg:left-3 font-heading font-extrabold text-white/[0.06] text-6xl lg:text-8xl leading-none tracking-tight whitespace-nowrap">
+                PT SINERGI INOVASI KARYA
+              </span>
+
+              <div className="relative flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 lg:gap-16">
+
+                <div className="lg:max-w-xs shrink-0">
+                  <span className="text-xs font-semibold tracking-widest text-[#D87939] uppercase block mb-3">
+                    Corporate Legitimacy
+                  </span>
+                  <h3 className="font-heading font-bold text-2xl lg:text-3xl text-white leading-tight mb-4">
+                    Legalitas Perusahaan Terverifikasi Resmi
+                  </h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    Terdaftar dan diawasi langsung oleh Kementerian Hukum dan HAM Republik Indonesia untuk kemitraan B2B yang sah secara hukum.
+                  </p>
+                </div>
+
+                <div className="flex-1 border-t border-white/10 lg:border-t-0 lg:border-l lg:pl-14 pt-8 lg:pt-0">
+                  <dl className="space-y-0">
+                    {legalFacts.map((fact, idx) => (
+                      <div
+                        key={fact.label}
+                        className="flex items-baseline justify-between gap-6 py-4 border-b border-dashed border-white/15 last:border-b-0"
+                      >
+                        <dt className="font-semibold text-[10px] text-slate-400 tracking-widest uppercase shrink-0">
+                          {fact.label}
+                        </dt>
+                        <dd className="font-mono text-[13px] lg:text-sm text-white font-semibold text-right">
+                          {fact.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
               </div>
             </div>
           </Reveal>
