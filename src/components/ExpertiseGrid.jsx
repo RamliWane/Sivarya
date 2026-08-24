@@ -103,7 +103,7 @@ const MAX_LINES = 5;
 
 function ServiceCard({ item, idx }) {
   const [open, setOpen] = useState(false);
-  const [cut, setCut] = useState(null);
+  const [overflows, setOverflows] = useState(false);
   const measureRef = useRef(null);
   const fullDesc = `${item.desc} ${item.longDesc}`;
 
@@ -115,32 +115,9 @@ function ServiceCard({ item, idx }) {
       const cs = getComputedStyle(el);
       const lineHeight = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.6;
       const maxH = lineHeight * MAX_LINES + 2;
-      const trigger = ' Selengkapnya';
 
       el.textContent = fullDesc;
-      if (el.scrollHeight <= maxH + 1) {
-        setCut(null);
-        return;
-      }
-
-      let lo = 1;
-      let hi = fullDesc.length - 1;
-      let best = 1;
-      while (lo <= hi) {
-        const mid = (lo + hi) >> 1;
-        el.textContent = fullDesc.slice(0, mid) + trigger;
-        if (el.scrollHeight <= maxH) {
-          best = mid;
-          lo = mid + 1;
-        } else {
-          hi = mid - 1;
-        }
-      }
-
-      let c = best;
-      while (c > 1 && !/\s/.test(fullDesc[c - 1])) c--;
-      if (c > 1) c--;
-      setCut(c);
+      setOverflows(el.scrollHeight > maxH + 1);
     };
 
     measure();
@@ -154,7 +131,7 @@ function ServiceCard({ item, idx }) {
     }
   }, [fullDesc]);
 
-  const truncated = !open && cut !== null;
+  const truncated = !open && overflows;
 
   return (
     <div
@@ -178,21 +155,35 @@ function ServiceCard({ item, idx }) {
         </a>
       </h3>
 
-      <p className="text-slate-500 text-xs leading-relaxed mb-3">
-        {truncated ? fullDesc.slice(0, cut).trimEnd() : fullDesc}{' '}
-        {(truncated || open) && (
+      <p
+        className={`text-slate-500 text-xs leading-relaxed mb-3 ${
+          truncated ? 'line-clamp-5' : ''
+        }`}
+      >
+        {fullDesc}
+      </p>
+
+      <div className="mt-auto flex flex-col items-end gap-1 pt-1">
+        {truncated && (
           <button
             type="button"
             aria-expanded={open}
-            onClick={() => setOpen(!open)}
-            className="inline border-0 p-0 m-0 text-xs leading-relaxed font-bold text-[#D87939] hover:text-[#C26527] hover:underline cursor-pointer"
+            onClick={() => setOpen(true)}
+            className="border-0 p-0 m-0 text-xs leading-relaxed font-bold text-[#D87939] hover:text-[#C26527] hover:underline cursor-pointer"
           >
-            {open ? 'Tutup' : 'Selengkapnya'}
+            Selengkapnya
           </button>
         )}
-      </p>
-
-      <div className="flex items-center justify-end gap-2">
+        {open && (
+          <button
+            type="button"
+            aria-expanded={open}
+            onClick={() => setOpen(false)}
+            className="border-0 p-0 m-0 text-xs leading-relaxed font-bold text-[#D87939] hover:text-[#C26527] hover:underline cursor-pointer"
+          >
+            Tutup
+          </button>
+        )}
         <a
           href={`/expertise#${item.id}`}
           aria-label={`Lihat halaman ${item.title}`}
@@ -220,7 +211,7 @@ export default function ExpertiseGrid() {
         </div>
 
         <div className="border-t border-slate-200">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
             {services.map((item, idx) => (
               <ServiceCard key={idx} item={item} idx={idx} />
             ))}
