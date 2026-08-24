@@ -5,8 +5,8 @@ const services = [
   {
     id: "digital-infra",
     title: "Infrastruktur Digital",
-    desc: "Bangun presensi digital yang scalable dari arsitektur UI/UX hingga sistem backend yang tangguh.",
-    longDesc: "Dari riset UX, wireframe, hingga deployment — kami merancang website, aplikasi, dan sistem internal yang scalable, aman, dan siap tumbuh bersama bisnis Anda. Setiap arsitektur dioptimasi untuk performa, SEO teknikal, dan kemudahan maintenance jangka panjang.",
+    desc: "Bangun presensi digital yang scalable dan responsif.",
+    longDesc: "Kami merancang arsitektur UI/UX dan sistem backend yang tangguh untuk website maupun aplikasi, memastikan brand Anda memberikan seamless digital experience bagi user di mana saja.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -21,8 +21,8 @@ const services = [
   {
     id: "audiovisual",
     title: "Produksi Audiovisual",
-    desc: "Corporate profile, TVC, hingga dokumentasi sinematik bernilai estetika tinggi untuk engagement maksimal.",
-    longDesc: "Tim produksi kami menangani seluruh proses kreatif: konsep & storyboard, shooting, lighting, hingga color grading dan editing final. Cocok untuk corporate profile, TVC, video produk, dokumentasi event, maupun konten sinematik untuk kebutuhan marketing Anda.",
+    desc: "Visual adalah bahasa universal brand Anda. ",
+    longDesc: "Mulai dari corporate profile, commercial TVC, hingga dokumentasi sinematik, tim spesialis kami memproduksi aset visual bernilai estetika tinggi yang didesain untuk mencuri perhatian dan engagement.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
@@ -33,8 +33,8 @@ const services = [
   {
     id: "podcast",
     title: "Produksi Podcast",
-    desc: "Kuasai thought leadership melalui audio dari studio recording hingga distribusi multi-platform.",
-    longDesc: "Mulai dari konsultasi format show, recording di studio profesional, editing audio & video, hingga distribusi ke Spotify, YouTube, dan platform utama. Kami bantu membangun thought leadership Anda dengan produksi yang konsisten episode demi episode.",
+    desc: "Kuasai thought leadership di industri Anda melalui audio.",
+    longDesc: "Kami menangani keseluruhan pipeline—dari fasilitas studio recording, sound engineering, hingga post-production—untuk menghasilkan podcast premium yang jernih dan profesional.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
@@ -46,8 +46,8 @@ const services = [
   {
     id: "social-media",
     title: "Strategi Media Sosial",
-    desc: "Strategi omnichannel berbasis data untuk menjaga relevansi brand dan mendorong pertumbuhan organik.",
-    longDesc: "Riset audiens & kompetitor, penyusunan content pillars, produksi konten harian, hingga pengelolaan engagement dan pelaporan analitik bulanan. Strategi omnichannel kami dirancang untuk menumbuhkan reach organik dan konversi yang terukur.",
+    desc: "Ubah followers menjadi brand advocates.",
+    longDesc: "Tim kami meramu strategi omnichannel, creative copywriting, hingga optimasi algoritma untuk menjaga relevansi brand Anda dan mendorong matriks pertumbuhan organik di media sosial.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
@@ -58,8 +58,8 @@ const services = [
   {
     id: "event-management",
     title: "Manajemen Event",
-    desc: "Grand launching, konferensi B2B, hingga experiential brand activation dieksekusi end-to-end.",
-    longDesc: "Grand launching, gathering, konferensi B2B/MICE, hingga brand activation — tim kami menangani perizinan, venue, rundown, produksi panggung, sampai dokumentasi. Satu tim orchestrator dengan standar eksekusi konsisten dari awal hingga akhir.",
+    desc: "Ciptakan momen yang tak terlupakan.",
+    longDesc: "Dari grand launching, konferensi berskala besar, hingga pameran B2B, kami mengeksekusi konsep brand activation secara presisi dan end-to-end, memastikan setiap event berjalan spektakuler.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -72,8 +72,8 @@ const services = [
   {
     id: "merchandise",
     title: "Corporate Merchandise",
-    desc: "Executive gifting, apparel kustom, dan promotional goods premium untuk memperkuat brand identity.",
-    longDesc: "Konsultasi produk, desain kustom, produksi, hingga pengiriman langsung ke gudang atau tangan penerima. Spesialisasi kami: executive gifting premium, apparel kustom, dan promotional goods berkualitas untuk klien, partner, dan karyawan Anda.",
+    desc: "Tinggalkan impresi fisik yang kuat.",
+    longDesc: "Kami memproduksi corporate merchandise dan seragam kustom dengan material premium dan desain eksklusif, dirancang khusus untuk memperkuat brand identity dan loyalitas pemangku kepentingan.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <polyline points="20 12 20 22 4 22 4 12" />
@@ -87,8 +87,8 @@ const services = [
   {
     id: "travel-management",
     title: "Curated Travel",
-    desc: "Corporate outing, senior-friendly trips, hingga concert logistics terkurasi end-to-end.",
-    longDesc: "Perjalanan wisata korporat yang terkurasi lengkap: transportasi, akomodasi, itinerary, konsumsi, hingga dokumentasi. Berpengalaman menangani senior-friendly trips, company outing, dan concert logistics untuk grup korporat dalam maupun luar kota.",
+    desc: "Hadirkan pengalaman perjalanan yang dirancang khusus untuk setiap audiens.",
+    longDesc: "Mulai dari corporate outing profesional, open trip rekreasi yang aman dan nyaman untuk lansia (senior-friendly), hingga manajemen perjalanan konser (concert trip) yang enerjik. Sebagai travel planner & organizer, kami mengkurasi itinerary, akomodasi, dan mengelola seluruh koordinasi mobilitas logistik secara end-to-end agar Anda cukup duduk manis dan menikmati momen.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
         <circle cx="12" cy="12" r="10" />

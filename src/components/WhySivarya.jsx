@@ -42,6 +42,9 @@ export default function WhySivarya() {
             Mengapa Memilih Ekosistem Sivarya?
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">
+            Integrasi strategis antara Technology, Content, dan Live Experiences.
+          </p>
+          <p className="text-slate-600 text-lg leading-relaxed">
             Kami memadukan kapabilitas agensi kreatif, rumah produksi audio-visual, konsultan teknologi, dan planner event ke dalam satu kemitraan strategis.
           </p>
         </div>

@@ -39,7 +39,8 @@ export default function CTABanner() {
         </a>
 
         <p className="text-slate-400 text-sm mt-7">
-          atau <a href="/contact" className="text-white font-semibold underline decoration-slate-500 underline-offset-4 hover:decoration-white">isi brief online</a> — respon dalam 1x24 jam
+          Mari berkolaborasi dan ciptakan impact bersama ekosistem kami.
+          atau <a href="/contact" className="text-white font-semibold underline decoration-slate-500 underline-offset-4 hover:decoration-white">isi brief online</a>
         </p>
 
         <div className="flex items-center justify-center gap-8 sm:gap-14 mt-16 pt-10 border-t border-white/10">
