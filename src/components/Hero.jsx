@@ -51,9 +51,9 @@ export default function Hero() {
             </h1>
 
             <p className="hero-rise text-white/50 text-base sm:text-lg leading-relaxed mb-8 max-w-md" style={{ animationDelay: '520ms' }}>
-              Integrated Creative Ecosystem yang merancang solusi end-to-end
-              untuk mengakselerasi bisnis Anda dari arsitektur digital hingga
-              experiential events.
+              One Seamless Ecosystem. Infinite Possibilities for Your Brand."
+Sub-headline: "Sebagai Integrated Creative Ecosystem, kami merancang solusi end-to-end untuk mengakselerasi bisnis Anda. Dari arsitektur digital, produksi konten visual, hingga experiential events dan mobilitas korporat, semuanya terorkestrasi dalam satu pintu.
+
             </p>
 
             <a
